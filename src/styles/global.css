@@ -54,7 +54,10 @@ body {
   color: var(--text-color);
 }
 
-nav, header, main, footer {
+nav,
+header,
+main,
+footer {
   padding-inline: 1rem;
 }
 
@@ -63,7 +66,12 @@ nav, header, main, footer {
   margin-inline: auto;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   scroll-margin-block-start: var(--nav-height);
 }
 
@@ -73,7 +81,7 @@ img {
   block-size: auto;
 }
 
-svg {
+.icon {
   inline-size: 1.5rem;
   block-size: 1.5rem;
   vertical-align: middle;
@@ -85,7 +93,8 @@ table {
   overflow-x: auto;
 }
 
-td, th {
+td,
+th {
   border: var(--standard-border);
   padding-inline: 0.5rem;
   padding-block: 0.25rem;
@@ -116,7 +125,8 @@ input {
   padding-inline: 0.5rem;
 }
 
-summary, button {
+summary,
+button {
   cursor: pointer;
 }
 
@@ -124,7 +134,8 @@ button {
   color: inherit;
 }
 
-ul, ol {
+ul,
+ol {
   line-height: 2;
 }
 

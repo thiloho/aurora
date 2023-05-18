@@ -39,7 +39,7 @@ hello **bold** the brown fox jumps _italicized text_ over the `code` high fence 
 
 ## Image
 
-![Minke Whale breaching in Antarctica](../../assets/blog/markdown-style-guide/example-image.jpg)
+![A deer with its head resting on its back. The animal has a brown fur coat and long ears, and it appears to be standing in an outdoor setting. Its snout is visible, as well as the white markings around its eyes.](../../assets/blog/markdown-style-guide/example-image.jpg)
 
 ## Table
 

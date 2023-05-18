@@ -7,19 +7,25 @@ import svelte from "@astrojs/svelte";
 export default defineConfig({
   experimental: {
     assets: true,
-    inlineStylesheets: "auto"
+    inlineStylesheets: "auto",
   },
   scopedStyleStrategy: "class",
   markdown: {
-    rehypePlugins: [rehypeHeadingIds, [rehypeAutolinkHeadings, {
-      behavior: "wrap",
-      properties: {
-        class: "heading-linker"
-      }
-    }]]
+    rehypePlugins: [
+      rehypeHeadingIds,
+      [
+        rehypeAutolinkHeadings,
+        {
+          behavior: "wrap",
+          properties: {
+            class: "heading-linker",
+          },
+        },
+      ],
+    ],
   },
   image: {
-    service: sharpImageService()
+    service: sharpImageService(),
   },
-  integrations: [svelte()]
+  integrations: [svelte()],
 });
