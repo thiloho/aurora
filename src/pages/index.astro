@@ -13,7 +13,7 @@ const articles = (await getCollection("blog")).sort(
 ---
 
 <PageLayout {...home.data}>
-  <TableOfContents slot="nav" client:load {headings} />
+  <TableOfContents slot="nav" client:only="svelte" {headings} />
   <Content />
   {
     articles.map((article) => (

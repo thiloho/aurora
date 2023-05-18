@@ -7,7 +7,7 @@ import PublicationDate from "../components/PublicationDate.astro";
 ---
 
 <PageLayout {title} {description}>
-  <TableOfContents slot="nav" client:load {headings} />
+  <TableOfContents slot="nav" client:only="svelte" {headings} />
   <Fragment slot="header">
     <p>
       Published on

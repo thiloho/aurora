@@ -1,5 +1,6 @@
 ---
 import ArticleSearchWrapper from "../components/ArticleSearchWrapper.astro";
+import ThemeToggle from "../components/ThemeToggle.svelte";
 ---
 
 <nav>
@@ -9,6 +10,7 @@ import ArticleSearchWrapper from "../components/ArticleSearchWrapper.astro";
     </a>
     <slot />
     <ArticleSearchWrapper />
+    <ThemeToggle client:only="svelte" />
   </div>
 </nav>
 

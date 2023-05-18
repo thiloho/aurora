@@ -6,6 +6,8 @@
   --tertiary-background-color: hsl(0 0% 90%);
   --text-color: hsl(0 0% 10%);
   --accent-color: #1e40af;
+
+  color-scheme: light;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -18,6 +20,26 @@
 
     color-scheme: dark;
   }
+}
+
+html.Light {
+  --background-color: hsl(0 0% 100%);
+  --secondary-background-color: hsl(0 0% 95%);
+  --tertiary-background-color: hsl(0 0% 90%);
+  --text-color: hsl(0 0% 10%);
+  --accent-color: #1e40af;
+
+  color-scheme: light;
+}
+
+html.Dark {
+  --background-color: hsl(0 0% 10%);
+  --secondary-background-color: hsl(0 0% 15%);
+  --tertiary-background-color: hsl(0 0% 20%);
+  --text-color: hsl(0 0% 90%);
+  --accent-color: #93c5fd;
+
+  color-scheme: dark;
 }
 
 html {

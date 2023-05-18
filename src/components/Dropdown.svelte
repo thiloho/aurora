@@ -1,7 +1,7 @@
 <script lang="ts">
     export let shortcut: string;
 
-    const possibleShortcuts = ["S", "T"];
+    const possibleShortcuts = ["S", "C", "T"];
 
     let detailsElement: HTMLDetailsElement;
     let summaryElement: HTMLElement;
