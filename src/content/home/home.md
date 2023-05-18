@@ -1,14 +1,30 @@
 ---
-title: "Home"
-description: "Welcome to my personal blog where I write about a wide variety of topics"
+title: "aurora"
+description: "Minimalistic blog theme built with Astro, focused on accessibility and usability."
 ---
 
 ## About
 
-May indulgence difficulty ham can put especially. Bringing remember for supplied her why was confined. Middleton principle did she procuring extensive believing add. Weather adapted prepare oh is calling.
+aurora is a minimal blog theme built with Astro, Svelte and plain CSS. It is focused on accessibility and usability.
 
-These wrong of he which there smile to my front. He fruit oh enjoy it of whose table. Cultivated occasional old her unpleasing unpleasant. At as do be against pasture covered viewing started. Enjoyed me settled mr respect no spirits civilly.
+All the interactiveness of the website is packed into three dropdowns that are located at the right of the top navigation bar. Every menu can be opened with a simple keyboard shortcut:
 
-Alteration literature to or an sympathize mr imprudence. Of is ferrars subject as enjoyed or tedious cottage. Procuring as in resembled by in agreeable. Next long no gave mr eyes. Admiration advantages no he celebrated so pianoforte unreserved. Not its herself forming charmed amiable. Him why feebly expect future now.
+- Table of **c**ontents: **Shift + c**
+- **S**earch for an article: **Shift + s**
+- **T**heme toggle: **Shift + t**
+
+The styles are simple, there are small improvements for some elements to keep everything consistent and responsive.
+
+### Table of contents
+
+Secondary headings (`<h2>`) are listed here, so each page is easy to navigate.
+
+### Search
+
+I wrote a simple algorithm for the search, and the matching works well. You can write the blog title words in any order, leave letters out, have multiple spaces between words, and more.
+
+### Theme toggle
+
+There are three websites themes: Light, Dark and System (inherits the theme of your browser or operating system).
 
 ## Articles

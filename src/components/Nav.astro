@@ -5,7 +5,9 @@ import ThemeToggle from "../components/ThemeToggle.svelte";
 
 <nav>
   <div class="container">
-    <a href="/"> Logo</a>
+    <a href="/">
+      <img src="/favicon.svg" width="32" height="32" alt="Logo" />
+    </a>
     <slot />
     <ArticleSearchWrapper />
     <ThemeToggle client:only="svelte" />
