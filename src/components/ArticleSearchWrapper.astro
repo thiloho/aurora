@@ -1,0 +1,10 @@
+---
+import { getCollection } from "astro:content";
+import ArticleSearch from "./ArticleSearch.svelte";
+
+const articles = (await getCollection("blog")).sort(
+  (a, b) => b.data.publicationDate.valueOf() - a.data.publicationDate.valueOf()
+);
+---
+
+<ArticleSearch client:load {articles} />

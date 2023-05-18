@@ -1,0 +1,33 @@
+---
+import ArticleSearchWrapper from "../components/ArticleSearchWrapper.astro";
+---
+
+<nav>
+  <div class="container">
+    <a href="/">
+      Logo
+    </a>
+    <slot />
+    <ArticleSearchWrapper />
+  </div>
+</nav>
+
+<style>
+  nav {
+    position: sticky;
+    inset-block-start: 0;
+    background-color: var(--secondary-background-color);
+    border-block-end: var(--standard-border);
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    block-size: var(--nav-height);
+    position: relative;
+  }
+
+  a {
+    margin-inline-end: auto;
+  }
+</style>

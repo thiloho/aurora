@@ -1,15 +1,37 @@
 ---
+import { getEntryBySlug, getCollection } from "astro:content";
+import PageLayout from "../layouts/PageLayout.astro";
+import PublicationDate from "../components/PublicationDate.astro";
+import TableOfContents from "../components/TableOfContents.svelte";
+
+const home = await getEntryBySlug("home", "home");
+const { Content, headings } = await home.render();
+
+const articles = (await getCollection("blog")).sort(
+  (a, b) => b.data.publicationDate.valueOf() - a.data.publicationDate.valueOf()
+);
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<PageLayout {...home.data}>
+  <TableOfContents slot="nav" client:load {headings} />
+  <Content />
+  {
+    articles.map((article) => (
+      <article>
+        <PublicationDate publicationDate={article.data.publicationDate} />
+        <h2>
+          <a href={article.slug}>{article.data.title}</a>
+        </h2>
+        <p>{article.data.description}</p>
+      </article>
+    ))
+  }
+</PageLayout>
+
+<style>
+  article:not(:first-of-type) {
+    margin-block-start: 2rem;
+    padding-block-start: 2rem;
+    border-block-start: var(--standard-border);
+  }
+</style>

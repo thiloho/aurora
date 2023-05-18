@@ -1,0 +1,16 @@
+---
+const { title } = Astro.props;
+---
+
+<header>
+  <div class="container">
+    <h1>{title}</h1>
+    <slot />
+  </div>
+</header>
+
+<style>
+  header {
+    margin-block-end: 4rem;
+  }
+</style>

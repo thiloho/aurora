@@ -1,0 +1,21 @@
+---
+const { title, description, publicationDate, headings } = Astro.props;
+
+import PageLayout from "./PageLayout.astro";
+import TableOfContents from "../components/TableOfContents.svelte";
+import PublicationDate from "../components/PublicationDate.astro";
+---
+
+<PageLayout {title} {description}>
+  <TableOfContents slot="nav" client:load {headings} />
+  <Fragment slot="header">
+    <p>
+      Published on
+      <strong>
+        <PublicationDate {publicationDate} />
+      </strong>
+    </p>
+    <a href="#">Edit this page</a>
+  </Fragment>
+  <slot />
+</PageLayout>
