@@ -6,17 +6,14 @@ const currentDateYear = new Date().getFullYear();
   <div class="container">
     <ul>
       <li>
-        <a href="#">GitHub</a>
+        <a href="mailto:thilo@thilohohlt.com">Contact</a>
       </li>
       <li>
-        <a href="#">Twitter</a>
-      </li>
-      <li>
-        <a href="#">More</a>
+        <a href="https://github.com/thiloho/aurora">GitHub</a>
       </li>
     </ul>
     <p>
-      <small>Copyright &copy; {currentDateYear} Your Name</small>
+      <small>Copyright &copy; {currentDateYear} Your Name<br><a href="https://aurora.thilohohlt.com/">Astro aurora theme</a></small>
     </p>
   </div>
 </footer>
@@ -30,11 +27,12 @@ const currentDateYear = new Date().getFullYear();
       var(--tertiary-background-color) 0%,
       var(--background-color) 100%
     );
+    text-align: center;
   }
 
   .container {
     display: grid;
-    place-content: center;
+    place-items: center;
   }
 
   ul {

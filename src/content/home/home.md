@@ -9,9 +9,10 @@ aurora is a minimal blog theme built with Astro, Svelte and plain CSS. It is foc
 
 All the interactiveness of the website is packed into three dropdowns that are located at the right of the top navigation bar. Every menu can be opened with a simple keyboard shortcut:
 
-- Table of **c**ontents: **Shift + c**
-- **S**earch for an article: **Shift + s**
-- **T**heme toggle: **Shift + t**
+- Table of contents: **Shift + c**
+- Search for an article: **Shift + s**
+- Theme toggle: **Shift + t**
+- Close menu: Escape (**Esc**)
 
 The styles are simple, there are small improvements for some elements to keep everything consistent and responsive.
 
@@ -27,4 +28,4 @@ I wrote a simple algorithm for the search, and the matching works well. You can 
 
 There are three websites themes: Light, Dark and System (inherits the theme of your browser or operating system).
 
-## Articles
+## Blog
