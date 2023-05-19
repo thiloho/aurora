@@ -25,7 +25,7 @@
   </svg>
   <div class="theme-toggle">
     {#each themeOptions as option, index}
-      <div>
+      <div class="input-wrapper">
         <input type="radio" id="theme-{option}" name="theme" value={option} bind:group={theme} on:change={saveTheme} />
         <label for="theme-{option}">{option}</label>
       </div>
@@ -42,6 +42,16 @@
     border: var(--standard-border);
     padding: 1rem;
     display: grid;
+    gap: 0.5rem;
+  }
+
+  input {
+    margin: 0;
+  }
+
+  .input-wrapper {
+    display: flex;
+    align-items: center;
     gap: 0.5rem;
   }
 </style>
