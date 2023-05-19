@@ -1,4 +1,4 @@
-:root {
+:root, html.Light {
   --nav-height: 3rem;
   --standard-border: 0.0625rem solid var(--tertiary-background-color);
   --background-color: hsl(0 0% 100%);
@@ -6,7 +6,6 @@
   --tertiary-background-color: hsl(0 0% 90%);
   --text-color: hsl(0 0% 10%);
   --accent-color: #1e40af;
-
   color-scheme: light;
 }
 
@@ -17,19 +16,8 @@
     --tertiary-background-color: hsl(0 0% 20%);
     --text-color: hsl(0 0% 90%);
     --accent-color: #93c5fd;
-
     color-scheme: dark;
   }
-}
-
-html.Light {
-  --background-color: hsl(0 0% 100%);
-  --secondary-background-color: hsl(0 0% 95%);
-  --tertiary-background-color: hsl(0 0% 90%);
-  --text-color: hsl(0 0% 10%);
-  --accent-color: #1e40af;
-
-  color-scheme: light;
 }
 
 html.Dark {
@@ -38,7 +26,6 @@ html.Dark {
   --tertiary-background-color: hsl(0 0% 20%);
   --text-color: hsl(0 0% 90%);
   --accent-color: #93c5fd;
-
   color-scheme: dark;
 }
 
@@ -139,6 +126,7 @@ button {
 ul,
 ol {
   line-height: 2;
+  padding-inline-start: 1rem;
 }
 
 a {
