@@ -12,6 +12,6 @@ const { title, description } = Astro.props;
   <meta name="description" content={description} />
   <script is:inline>
     const storedTheme = localStorage.getItem("theme");
-    document.documentElement.classList = storedTheme;
+    document.documentElement.className = storedTheme;
   </script>
 </head>

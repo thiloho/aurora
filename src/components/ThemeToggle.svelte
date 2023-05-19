@@ -6,7 +6,7 @@
   let theme = "System";
 
   function loadTheme() {
-    theme = localStorage.getItem("theme");
+    theme = localStorage.getItem("theme") || "System";
   }
 
   function saveTheme() {
@@ -15,7 +15,7 @@
 
   loadTheme();
 
-  $: document.documentElement.classList = theme;
+  $: document.documentElement.className = theme;
 </script>
 
 <Dropdown shortcut="T">

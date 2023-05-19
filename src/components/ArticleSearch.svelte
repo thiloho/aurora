@@ -55,6 +55,7 @@
     }
 
     input {
-      max-inline-size: 100%;
+      inline-size: 100%;
+      margin-block-start: 0.25rem;
     }
 </style>

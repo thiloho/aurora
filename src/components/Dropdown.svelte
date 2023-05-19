@@ -7,27 +7,27 @@
   let summaryElement: HTMLElement;
 
   function openMenu() {
-      detailsElement.setAttribute("open", "");
+    detailsElement.setAttribute("open", "");
   }
 
   export function closeMenu() {
-      detailsElement.removeAttribute("open");
+    detailsElement.removeAttribute("open");
   }
 
   function handleKeydown(event: KeyboardEvent) {
-      if (event.key === "Escape") closeMenu();
+    if (event.key === "Escape") closeMenu();
 
-      if (event.key === shortcut) {
-          summaryElement.focus();
-          openMenu();
-      } else if (possibleShortcuts.includes(event.key) && event.key !== shortcut) {
-          closeMenu();
-      }
+    if (event.key === shortcut) {
+      summaryElement.focus();
+      openMenu();
+    } else if (possibleShortcuts.includes(event.key) && event.key !== shortcut) {
+      closeMenu();
+    }
   }
 
   function handleClick(event: MouseEvent) {
       if (!detailsElement.contains(event.target as Node)) {
-          closeMenu();
+        closeMenu();
       }
   }
 </script>
