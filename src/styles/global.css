@@ -102,6 +102,8 @@ th {
 
 pre {
   padding: 1rem;
+  background-color: hsl(0 0% 15%) !important;
+  border: var(--standard-border);
 }
 
 code {
