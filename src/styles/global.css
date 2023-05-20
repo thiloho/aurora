@@ -39,6 +39,9 @@ body {
   font-family: "Roboto", sans-serif;
   background-color: var(--background-color);
   color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  min-block-size: 100vh;
 }
 
 nav,
@@ -46,6 +49,10 @@ header,
 main,
 footer {
   padding-inline: 1rem;
+}
+
+main {
+  margin-block-end: auto;
 }
 
 .container {
@@ -131,4 +138,10 @@ ol {
 
 a {
   color: var(--accent-color);
+}
+
+blockquote {
+  margin-inline-start: 0;
+  padding-inline-start: 1rem;
+  border-inline-start: var(--standard-border);
 }
