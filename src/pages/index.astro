@@ -1,37 +1,62 @@
 ---
 import { getEntryBySlug, getCollection } from "astro:content";
+import { Image } from "astro:assets";
 import PageLayout from "../layouts/PageLayout.astro";
 import PublicationDate from "../components/PublicationDate.astro";
-import TableOfContents from "../components/TableOfContents.svelte";
 
-const home = await getEntryBySlug("home", "home");
-const { Content, headings } = await home.render();
+const about = await getEntryBySlug("about", "about");
+const { Content } = await about.render();
 
 const articles = (await getCollection("blog")).sort(
   (a, b) => b.data.publicationDate.valueOf() - a.data.publicationDate.valueOf()
 );
 ---
 
-<PageLayout {...home.data}>
-  <TableOfContents slot="nav" client:only="svelte" {headings} />
+<PageLayout title="aurora" description="Minimalistic blog theme built with Astro, focused on accessibility and usability.">
   <Content />
-  {
-    articles.map((article) => (
-      <article>
-        <PublicationDate publicationDate={article.data.publicationDate} />
-        <h2>
-          <a href={article.slug}>{article.data.title}</a>
-        </h2>
-        <p>{article.data.description}</p>
-      </article>
-    ))
-  }
+  <div class="article-grid">
+    {
+      articles.map((article) => (
+        <article>
+          <header>
+            <Image src={article.data.cover} alt={article.data.coverAlt} width="320" height="180" />  
+          </header>
+          <div class="article-content">
+            <PublicationDate publicationDate={article.data.publicationDate} />
+            <h2>
+              <a href={article.slug}>{article.data.title}</a>
+            </h2>
+            <p>{article.data.description}</p>
+          </div>
+        </article>
+      ))
+    }
+  </div>
 </PageLayout>
 
 <style>
-  article:not(:first-of-type) {
-    margin-block-start: 2rem;
-    padding-block-start: 2rem;
-    border-block-start: var(--standard-border);
+  .article-grid {
+    display: grid;
+    gap: var(--size-7);
+    grid-auto-rows: 1fr;
+  }
+
+  article {
+    border: var(--standard-border);
+  }
+
+  article header {
+    padding: 0;
+    border-block-end: var(--standard-border);
+    padding-inline: var(--size-3);
+    padding-block: var(--size-7);
+  }
+
+  article img {
+    margin-inline: auto;
+  }
+
+  .article-content {
+    padding: var(--size-3);
   }
 </style>

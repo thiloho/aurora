@@ -23,39 +23,45 @@
     <div class="article-search">
       <label for="article-search">Search for an article:</label>
       <input type="search" id="article-search" placeholder="first po..." bind:value={searchTerm} />
-        {#if filteredArticles.length > 0}
-          <p>Results: <strong>{filteredArticles.length}</strong></p>
-            <ul>
-              {#each filteredArticles as article}
-                <li>
-                  <a href="/{article.slug}">{article.data.title}</a>
-                </li>
-              {/each}
-            </ul>
-        {:else if searchTerm.trim() !== ""}
-          <p>No results found</p>
-        {/if}
+      {#if filteredArticles.length > 0}
+        <p>Results: <strong>{filteredArticles.length}</strong></p>
+          <ul>
+            {#each filteredArticles as article}
+              <li>
+                <a href="/{article.slug}">{article.data.title}</a>
+              </li>
+            {/each}
+          </ul>
+      {:else if searchTerm.trim() !== ""}
+        <p>No results found</p>
+      {/if}
     </div>
 </Dropdown>
 
 <style>
-    .article-search {
-      padding: var(--size-3);
-      position: absolute;
-      inset-inline: 0;
-      border: var(--standard-border);
-      inset-block-start: var(--nav-height);
-      background-color: var(--background-color);
-      display: grid;
-      overflow-x: auto;
-    }
+  .article-search {
+    padding: var(--size-3);
+    position: absolute;
+    inset-inline: 0;
+    border: var(--standard-border);
+    inset-block-start: var(--nav-height);
+    background-color: var(--background-color);
+    display: grid;
+    max-block-size: calc(100vh - var(--nav-height) * 2);
+    overflow-y: auto;
+  }
 
-    ul {
-      margin-block-start: 0;
-    }
+  input[type="search"] {
+    position: sticky;
+    inset-block-start: 0;
+  }
 
-    input {
-      inline-size: 100%;
-      margin-block-start: var(--size-1);
-    }
+  ul {
+    margin-block-start: 0;
+  }
+
+  input {
+    inline-size: 100%;
+    margin-block-start: var(--size-1);
+  }
 </style>

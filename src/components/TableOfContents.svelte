@@ -30,6 +30,8 @@
     padding: 0;
     list-style: none;
     inset-inline-end: 0;
+    max-block-size: calc(100vh - var(--nav-height) * 2);
+    overflow-y: auto;
   }
 
   a {

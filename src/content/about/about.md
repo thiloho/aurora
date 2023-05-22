@@ -1,8 +1,3 @@
----
-title: "aurora"
-description: "Minimalistic blog theme built with Astro, focused on accessibility and usability."
----
-
 ## About
 
 aurora is a minimal blog theme built with Astro, Svelte and plain CSS. It is focused on accessibility and usability.

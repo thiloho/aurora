@@ -1,4 +1,6 @@
 ---
+cover: "../../assets/blog/nix-flake-examples/cover.jpg"
+coverAlt: "Cover image for the blog post"
 title: "Nix flake examples"
 publicationDate: 2023-05-12
 description: "Improve reproducibility, composability and usability of nix-based projects with flakes and the experimental cli commands."

@@ -1,4 +1,6 @@
 ---
+cover: "../../assets/blog/markdown-style-guide/cover.jpg"
+coverAlt: "Cover image for the blog post"
 title: "Markdown style guide"
 publicationDate: 2023-05-20
 description: "Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro."

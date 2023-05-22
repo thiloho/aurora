@@ -1,6 +1,7 @@
 ---
-const { id, title, description, publicationDate, headings } = Astro.props;
+const { id, cover, coverAlt, title, description, publicationDate, headings } = Astro.props;
 
+import { Image } from "astro:assets";
 import PageLayout from "./PageLayout.astro";
 import TableOfContents from "../components/TableOfContents.svelte";
 import PublicationDate from "../components/PublicationDate.astro";
@@ -8,6 +9,7 @@ import PublicationDate from "../components/PublicationDate.astro";
 
 <PageLayout {title} {description}>
   <TableOfContents slot="nav" client:only="svelte" {headings} />
+  <Image src={cover} alt={coverAlt} slot="header-before" />  
   <Fragment slot="header">
     <p>
       Published on

@@ -4,6 +4,7 @@ const { title } = Astro.props;
 
 <header>
   <div class="container">
+    <slot name="before-title" />
     <h1>{title}</h1>
     <slot />
   </div>

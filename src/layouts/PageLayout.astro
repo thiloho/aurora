@@ -19,6 +19,7 @@ import Footer from "../components/Footer.astro";
       <slot name="nav" />
     </Nav>
     <Header {title}>
+      <slot slot="before-title" name="header-before" />
       <slot name="header" />
     </Header>
     <main>
