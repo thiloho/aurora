@@ -40,7 +40,7 @@
 
 <style>
     .article-search {
-      padding: 1rem;
+      padding: var(--size-3);
       position: absolute;
       inset-inline: 0;
       border: var(--standard-border);
@@ -56,6 +56,6 @@
 
     input {
       inline-size: 100%;
-      margin-block-start: 0.25rem;
+      margin-block-start: var(--size-1);
     }
 </style>

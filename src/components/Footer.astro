@@ -20,9 +20,9 @@ const currentDateYear = new Date().getFullYear();
 
 <style>
   footer {
-    margin-block-start: 4rem;
-    padding-block: 1rem;
-    background: linear-gradient(
+    padding-block: var(--size-3);
+    margin-block-start: var(--size-9);
+    background-image: linear-gradient(
       0deg,
       var(--tertiary-background-color) 0%,
       var(--background-color) 100%
@@ -40,6 +40,6 @@ const currentDateYear = new Date().getFullYear();
     display: flex;
     flex-wrap: wrap;
     list-style: none;
-    gap: 1rem;
+    gap: var(--size-3);
   }
 </style>

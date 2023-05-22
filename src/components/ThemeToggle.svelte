@@ -1,12 +1,12 @@
 <script lang="ts">
   import Dropdown from "./Dropdown.svelte";
 
-  let themeOptions = ["System", "Light", "Dark"];
+  let themeOptions = ["system", "light", "dark"];
 
   let theme = "System";
 
   function loadTheme() {
-    theme = localStorage.getItem("theme") || "System";
+    theme = localStorage.getItem("theme") || "system";
   }
 
   function saveTheme() {
@@ -27,7 +27,7 @@
     {#each themeOptions as option, index}
       <div class="input-wrapper">
         <input type="radio" id="theme-{option}" name="theme" value={option} bind:group={theme} on:change={saveTheme} />
-        <label for="theme-{option}">{option}</label>
+        <label for="theme-{option}">{option[0].toUpperCase() + option.slice(1)}</label>
       </div>
     {/each}
   </div>
@@ -40,18 +40,14 @@
     inset-block-start: var(--nav-height);
     background-color: var(--background-color);
     border: var(--standard-border);
-    padding: 1rem;
+    padding: var(--size-3);
     display: grid;
-    gap: 0.5rem;
-  }
-
-  input {
-    margin: 0;
+    gap: var(--size-2);
   }
 
   .input-wrapper {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: var(--size-2);
   }
 </style>

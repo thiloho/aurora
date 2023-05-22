@@ -24,7 +24,6 @@
   ul {
     position: absolute;
     border: var(--standard-border);
-    padding-inline-start: 2rem;
     background-color: var(--background-color);
     inset-block-start: var(--nav-height);
     margin: 0;
@@ -35,7 +34,7 @@
 
   a {
     display: block;
-    padding-inline: 1rem;
-    padding-block: 0.25rem;
+    padding-inline: var(--size-3);
+    padding-block: var(--size-1);
   }
 </style>

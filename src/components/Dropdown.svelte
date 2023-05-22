@@ -44,6 +44,6 @@
 <style>
   summary {
     display: grid;
-    padding: 0.5rem;
+    padding: var(--size-2);
   }
 </style>
