@@ -9,7 +9,7 @@
   --tertiary-background-color: var(--gray-2);
   --text-color: var(--gray-12);
   --accent-color: var(--blue-11);
-  --radio-border-color: var(--gray-5);
+  --radio-border-color: var(--gray-4);
   color-scheme: light;
 }
 
@@ -20,7 +20,7 @@
     --tertiary-background-color: var(--gray-8);
     --text-color: var(--gray-0);
     --accent-color: var(--blue-2);
-    --radio-border-color: var(--gray-7);
+    --radio-border-color: var(--gray-8);
     color-scheme: dark;
   }
 }
@@ -31,7 +31,7 @@
   --tertiary-background-color: var(--gray-8);
   --text-color: var(--gray-0);
   --accent-color: var(--blue-2);
-  --radio-border-color: var(--gray-7);
+  --radio-border-color: var(--gray-8);
   color-scheme: dark;
 }
 
@@ -107,7 +107,7 @@ pre {
 
 code {
   font-family: var(--font-mono);
-  font-size: var(--font-size-0);
+  font-size: var(--font-size-1);
 }
 
 .heading-linker {
@@ -118,7 +118,7 @@ code {
 .heading-linker::before {
   content: "#";
   color: var(--accent-color);
-  margin-inline-end: var(--size-2);
+  margin-inline-end: var(--size-1);
 }
 
 button, input {
