@@ -1,5 +1,5 @@
 ---
-const { title, description } = Astro.props;
+const { title, description, ogImage } = Astro.props;
 
 import "open-props/style";
 import "../styles/global.css";
@@ -13,7 +13,7 @@ import Footer from "../components/Footer.astro";
 ---
 
 <html lang="en">
-  <Head {title} {description} />
+  <Head {title} {description} {ogImage} />
   <body>
     <Nav>
       <slot name="nav" />

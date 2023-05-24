@@ -7,7 +7,7 @@ import TableOfContents from "../components/TableOfContents.svelte";
 import PublicationDate from "../components/PublicationDate.astro";
 ---
 
-<PageLayout {title} {description}>
+<PageLayout {title} {description} ogImage={cover.src} >
   <TableOfContents slot="nav" client:only="svelte" {headings} />
   <Image src={cover} alt={coverAlt} slot="header-before" />  
   <Fragment slot="header">

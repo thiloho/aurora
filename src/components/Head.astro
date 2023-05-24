@@ -1,5 +1,7 @@
 ---
-const { title, description } = Astro.props;
+const { title, description, ogImage = ""  } = Astro.props;
+
+const imageUrl = new URL(ogImage, Astro.url.origin);
 ---
 
 <head>
@@ -14,4 +16,5 @@ const { title, description } = Astro.props;
     const storedTheme = localStorage.getItem("theme");
     document.documentElement.className = storedTheme;
   </script>
+  <meta property="og:image" content={imageUrl} />
 </head>
