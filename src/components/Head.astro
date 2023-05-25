@@ -1,7 +1,7 @@
 ---
 const { title, description, ogImage = ""  } = Astro.props;
 
-const imageUrl = new URL(ogImage, Astro.url.origin);
+const imageUrl = ogImage.replace("localhost:3000", "aurora.thilohohlt.com");
 ---
 
 <head>
