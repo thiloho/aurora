@@ -33,13 +33,13 @@ Replace the domain specified for the `site` property in the `astro.config.ts` fi
 site: "https://aurora.thilohohlt.com"
 ```
 
-Change the `title` and `description` props in `index.astro` to match your website:
+Change the `title` and `description` props in `/src/pages/index.astro` to match your website's content:
 
 ```html
 <PageLayout title="aurora" description="Minimalistic blog theme built with Astro, focused on accessibility and usability.">
 ```
 
-In the components `Head.astro` and `Footer.astro`, replace *Your Name* with your actual name:
+For the components `Head.astro` and `Footer.astro`, replace *Your Name* with your actual name:
 
 ```html
 <meta name="author" content="Your Name" />
@@ -58,6 +58,6 @@ aurora is a minimal blog theme built with Astro, Svelte and plain CSS. It is foc
 ...
 ```
 
-The cover image (the image people see embedded when you send a link to your website) can be changed by altering the file `public/cover.jpg`.
+The cover image (the image people see embedded when you send a link to your website) can be changed by altering the file `/public/cover.jpg`.
 
-Blog articles are created using Astro content collections, images for individual blog posts are stored in `/src/assets/blog-post-name/image-name.jpg`. You can take a look at the example blog posts in this repository to see how it all works out.
+Blog articles are created using Astro content collections, images for individual articles are stored in `/src/assets/blog/article-name/image-name.jpg`. You can take a look at the example articles in this repository to see how it all works out.
