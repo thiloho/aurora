@@ -1,7 +1,7 @@
 ---
-const { title, description, ogImage = ""  } = Astro.props;
+const { title, description, ogImage = "" } = Astro.props;
 
-const imageUrl = "https://aurora.thilohohlt.com" + ogImage;
+const imageUrl = ogImage ? Astro.url.origin + ogImage : Astro.url.origin + "/cover.jpg";
 ---
 
 <head>
