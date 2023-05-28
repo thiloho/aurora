@@ -23,4 +23,8 @@ I wrote a simple algorithm for the search, and the matching works well. You can 
 
 There are three websites themes: Light, Dark and System (inherits the theme of your browser or operating system).
 
+### Make the theme yours
+
+See the [documentation on how to adjust the theme](https://github.com/thiloho/aurora#make-the-theme-yours).
+
 ## Blog
