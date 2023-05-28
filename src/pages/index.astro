@@ -19,7 +19,7 @@ const articles = (await getCollection("blog")).sort(
       articles.map((article) => (
         <article>
           <header>
-            <Image src={article.data.cover} alt={article.data.coverAlt} width="320" height="180" />  
+            <Image src={article.data.cover} alt={article.data.coverAlt} /> 
           </header>
           <div class="article-content">
             <PublicationDate publicationDate={article.data.publicationDate} />
@@ -47,12 +47,6 @@ const articles = (await getCollection("blog")).sort(
   article > header {
     padding: 0;
     border-block-end: var(--standard-border);
-    padding-inline: var(--size-3);
-    padding-block: var(--size-7);
-  }
-
-  article img {
-    margin-inline: auto;
   }
 
   .article-content {
