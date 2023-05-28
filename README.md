@@ -29,7 +29,7 @@ There are three websites themes: Light, Dark and System (inherits the theme of y
 
 Replace the domain specified for the `site` property in the `astro.config.ts` file with your own domain:
 
-```json
+```ts
 site: "https://aurora.thilohohlt.com"
 ```
 
