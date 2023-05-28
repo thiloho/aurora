@@ -38,14 +38,13 @@ const articles = (await getCollection("blog")).sort(
   .article-grid {
     display: grid;
     gap: var(--size-7);
-    grid-auto-rows: 1fr;
   }
 
   article {
     border: var(--standard-border);
   }
 
-  article header {
+  article > header {
     padding: 0;
     border-block-end: var(--standard-border);
     padding-inline: var(--size-3);
