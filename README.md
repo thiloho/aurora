@@ -24,3 +24,40 @@ I wrote a simple algorithm for the search, and the matching works well. You can 
 ### Theme toggle
 
 There are three websites themes: Light, Dark and System (inherits the theme of your browser or operating system).
+
+## Make the theme yours
+
+Replace the domain specified for the `site` property in the `astro.config.ts` file with your own domain:
+
+```json
+site: "https://aurora.thilohohlt.com"
+```
+
+Change the `title` and `description` props in `index.astro` to match your website:
+
+```html
+<PageLayout title="aurora" description="Minimalistic blog theme built with Astro, focused on accessibility and usability.">
+```
+
+In the components `Head.astro` and `Footer.astro`, replace *Your Name* with your actual name:
+
+```html
+<meta name="author" content="Your Name" />
+```
+
+```html
+<small>Copyright &copy; {currentDateYear} Your Name<br><a href="https://aurora.thilohohlt.com/">Astro aurora theme</a></small>
+```
+
+The about section on the main page can be modified by adjusting the markdown text in the file `src/content/about/about.md`:
+
+```md
+## About
+
+aurora is a minimal blog theme built with Astro, Svelte and plain CSS. It is focused on accessibility and usability.
+...
+```
+
+The cover image (the image people see embedded when you send a link to your website) can be changed by altering the file `public/cover.jpg`.
+
+Blog articles are created using Astro content collections, images for individual blog posts are stored in `/src/assets/blog-post-name/image-name.jpg`. You can take a look at the example blog posts in this repository to see how it all works out.
