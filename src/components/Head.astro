@@ -12,13 +12,13 @@ const imageUrl = ogImage ? Astro.url.origin + ogImage : Astro.url.origin + "/cov
   <title>{title}</title>
   <meta name="author" content="Your Name" />
   <meta name="description" content={description} />
-  <script is:inline>
-    const storedTheme = localStorage.getItem("theme");
-    document.documentElement.className = storedTheme;
-  </script>
   <meta property="og:type" content="website" />
   <meta property="og:url" content={Astro.url.origin} />
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
   <meta property="og:image" content={imageUrl} />
+  <script is:inline>
+    const storedTheme = localStorage.getItem("theme");
+    document.documentElement.className = storedTheme;
+  </script>
 </head>
