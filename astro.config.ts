@@ -1,4 +1,4 @@
-import { defineConfig, sharpImageService } from "astro/config";
+import { defineConfig } from "astro/config";
 import { rehypeHeadingIds } from "@astrojs/markdown-remark";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import svelte from "@astrojs/svelte";
@@ -8,8 +8,7 @@ export default defineConfig({
   site: "https://aurora.thilohohlt.com",
   compressHTML: true,
   experimental: {
-    assets: true,
-    inlineStylesheets: "auto",
+    assets: true
   },
   scopedStyleStrategy: "class",
   markdown: {
@@ -25,9 +24,6 @@ export default defineConfig({
         },
       ],
     ],
-  },
-  image: {
-    service: sharpImageService(),
   },
   integrations: [svelte()],
 });

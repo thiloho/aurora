@@ -17,7 +17,6 @@
     "astro": "^2.5.3",
     "open-props": "^1.5.8",
     "rehype-autolink-headings": "^6.1.1",
-    "sharp": "^0.32.1",
     "svelte": "^3.59.1"
   }
 }
