@@ -1,4 +1,4 @@
-import { defineConfig } from "astro/config";
+import { defineConfig, squooshImageService } from "astro/config";
 import { rehypeHeadingIds } from "@astrojs/markdown-remark";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import svelte from "@astrojs/svelte";
@@ -8,6 +8,9 @@ export default defineConfig({
   site: "https://aurora.thilohohlt.com",
   compressHTML: true,
   scopedStyleStrategy: "class",
+  image: {
+    service: squooshImageService(),
+  },
   markdown: {
     rehypePlugins: [
       rehypeHeadingIds,
