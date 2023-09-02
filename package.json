@@ -10,13 +10,12 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/markdown-remark": "^2.2.1",
-    "@astrojs/svelte": "^2.1.1",
+    "@astrojs/markdown-remark": "^3.0.0",
+    "@astrojs/svelte": "^4.0.0",
     "@fontsource/jetbrains-mono": "^4.5.12",
     "@fontsource/roboto": "^4.5.8",
-    "astro": "^2.5.3",
+    "astro": "^3.0.7",
     "open-props": "^1.5.8",
-    "rehype-autolink-headings": "^6.1.1",
-    "svelte": "^3.59.1"
+    "rehype-autolink-headings": "^6.1.1"
   }
 }

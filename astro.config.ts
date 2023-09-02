@@ -7,9 +7,6 @@ import svelte from "@astrojs/svelte";
 export default defineConfig({
   site: "https://aurora.thilohohlt.com",
   compressHTML: true,
-  experimental: {
-    assets: true
-  },
   scopedStyleStrategy: "class",
   markdown: {
     rehypePlugins: [

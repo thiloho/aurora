@@ -14,6 +14,9 @@ const articles = (await getCollection("blog")).sort(
 
 <PageLayout title="aurora" description="Minimalistic blog theme built with Astro, focused on accessibility and usability.">
   <Content />
+  <h2 id="blog">
+    <a class="heading-linker" href="#blog">Blog</a>  
+  </h2>
   <div class="article-grid">
     {
       articles.map((article) => (
@@ -23,9 +26,9 @@ const articles = (await getCollection("blog")).sort(
           </header>
           <div class="article-content">
             <PublicationDate publicationDate={article.data.publicationDate} />
-            <h2>
+            <h3>
               <a href={article.slug}>{article.data.title}</a>
-            </h2>
+            </h3>
             <p>{article.data.description}</p>
           </div>
         </article>

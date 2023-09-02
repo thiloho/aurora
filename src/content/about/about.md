@@ -26,5 +26,3 @@ There are three websites themes: Light, Dark and System (inherits the theme of y
 ### Make the theme yours
 
 See the [documentation on how to adjust the theme](https://github.com/thiloho/aurora#make-the-theme-yours).
-
-## Blog

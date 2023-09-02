@@ -24,7 +24,7 @@
         default = pkgs.buildNpmPackage {
           name = "build-aurora-blog";
           buildInputs = with pkgs; [
-            nodejs_18
+            nodejs_20
           ];
           src = ./.;
           npmDepsHash = "sha256-K30UsMZ508XT1x/1eXY/xg7dfhLm55pdi9vOdDQHtWg=";
